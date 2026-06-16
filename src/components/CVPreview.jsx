@@ -16,7 +16,7 @@ const CVPreview = () => {
       <p>{personal.descripcion}</p>
       <div>
         <h3>Enlaces</h3>
-        {personal.enlaces.map((e, i) => <a href={enlace.url} target="_blank" rel="noreferrer">{enlace.nombre}</a>}
+        {personal.enlaces.map((e, i) => <a key={i} href={e.url} target="_blank">{e.nombre}</a>}
       </div>
       <h3>Habilidades</h3>
       <ul>{skills.map(s => <li key={s.id}>{s.nombre} - {s.nivel}</li>)}</ul>
